@@ -1,0 +1,10 @@
+.git
+.gitignore
+README.md
+docs/
+*.md
+.env
+.env.*
+*.pfx
+*.p12
+*.key
