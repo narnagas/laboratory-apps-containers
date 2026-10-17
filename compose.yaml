@@ -1,0 +1,13 @@
+# Requires Docker Compose >= 2.17 for additional_contexts.
+# Clone both repositories as siblings, then run: docker compose up --build -d
+services:
+  angular-laboratory:
+    build:
+      context: .
+      dockerfile: docker/angular/Dockerfile
+      additional_contexts:
+        app: ../laboratory-apps
+    image: lalagunatek/angular-laboratory:local
+    ports:
+      - '8088:80'
+    restart: unless-stopped
